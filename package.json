@@ -1,0 +1,19 @@
+{
+  "name": "clinica-web-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cy:headed": "cypress run --headed",
+    "cy:open": "cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^14.5.1",
+    "cypress-mochawesome-reporter": "^4.0.0",
+    "cypress-xpath": "^2.0.1"
+  }
+}
