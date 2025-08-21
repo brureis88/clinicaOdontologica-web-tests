@@ -1,2 +1,3 @@
 import './commands/common'
-import './commands/consulta'
+import './commands/agedarConsulta'
+import './commands/consultarHorarios'
