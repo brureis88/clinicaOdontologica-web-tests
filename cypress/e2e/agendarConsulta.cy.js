@@ -5,7 +5,7 @@ describe('Testes de Agendar Consulta', () => {
     })
 
     it('Validar agendamento com horário disponível', () => {
-        cy.fazerAAgendamentoDeConsultaComDadosValidos()
+        cy.fazerAAgendamentoDeConsultaComDadosValidos('Dra. Ana Paula Santos — Endodontia', '13:00')
         cy.validarMensagem('Consulta agendada!')
     })
 
