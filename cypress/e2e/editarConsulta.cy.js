@@ -1,11 +1,11 @@
-describe('Testes de Editar Consulta', () => {
+describe('Editar Consulta', () => {
 
     beforeEach(() => {
         cy.visit('/')
     })
 
     it('Validar edição de agendamento com horário disponível', () => {
-        cy.fazerAAgendamentoDeConsultaViaAPI()
+        cy.fazerAAgendamentoDeConsultaViaAPI('11:00')
         cy.editarAgendamentoComDadosValidos()
         cy.validarAlteracaoDoAgendamento()
     })

@@ -1,4 +1,4 @@
-describe('Testes de Consultar Horários', () => {
+describe('Consultar Horários', () => {
 
     beforeEach(() => {
         cy.visit('/')
