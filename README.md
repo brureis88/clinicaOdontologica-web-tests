@@ -71,4 +71,8 @@ npm run test
 
 ---
 
-Dúvidas ou sugestões? Abra uma issue ou entre em contato!
+## 📝 Licença
+
+Este projeto é destinado exclusivamente para estudos de teste de software.
+
+**Desenvolvido por Bruno Reis**
