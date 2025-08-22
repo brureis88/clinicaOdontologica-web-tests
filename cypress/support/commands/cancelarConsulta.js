@@ -1,4 +1,5 @@
 Cypress.Commands.add('cancelarAgendamento', (profissionalAgendar, horarioAgendar) => {
+    cy.reload()
     cy.get('@agendamentoId').then(agendamentoId => {
         cy.xpath(`//button[@title='Cancelar' and @data-id='${agendamentoId}']`).click()
     })
