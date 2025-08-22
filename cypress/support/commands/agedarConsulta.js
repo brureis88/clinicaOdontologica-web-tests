@@ -66,3 +66,26 @@ Cypress.Commands.add('fazerAAgendamentoDeConsultaSemInformarAData', () => {
     cy.get('#btnAgendar').click()
 
 })
+
+Cypress.Commands.add('fazerAAgendamentoDeConsultaViaAPI', (profissionalAgendar, horarioAgendar) => {
+    cy.request({
+        method: 'POST',
+        url: 'http://localhost:3000/api/consultas/agendar',
+        failOnStatusCode: false,
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: {
+            pacienteId: 1,
+            profissionalId: 1,
+            data: '2025-08-24',
+            horario: '11:00',
+            tipoConsulta: 'Agend. API',
+            observacoes: 'Agendado via API'
+        }
+    }).then((response) => {
+        expect(response.status).to.eq(201)
+        cy.wrap(response.body.data.id).as('agendamentoId')
+    })
+
+})
