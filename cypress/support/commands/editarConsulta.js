@@ -19,5 +19,4 @@ Cypress.Commands.add('validarAlteracaoDoAgendamento', () => {
             cy.xpath(`//button[@title='Editar' and @data-id='${agendamentoId}']/../../td`).should('contain.text', horaAlterada)
         })
     })
-
 })
